@@ -1,0 +1,31 @@
+<!--doctype HTML-->
+<html>
+<head>
+</head>
+<body>
+	<div class="col-md-8 col-md-offset-2"><br><br><br>
+		<table class="table table-hover table-striped">
+			<tr class="active">
+				<th>NAME</th>
+				<th>DESCRIPTION</th>
+				<th>STATUS</th>
+				<th>UPDATED AT</th>
+				<th>EDIT</th>
+				<th>DELETE</th>
+			</tr>
+			<tr class="active" ng-repeat="todo1 in todo1s">
+				<form name="editForm" novalidate role="form">
+				<td><input type="text" name="name" id="name" ng-model="todo1.name" ></td>
+				<td> <input type="text" name="descript" id="descript" ng-model="todo1.descript" > </td>
+				<td> <input type="checkbox" name="status" id="status" ng-model="todo1.status" ></td>
+				
+				<td>{{todo1.updatedAt | date:'dd-M-yyyy H:mm'}}</td>
+				<td><input type="submit" class="btn btn-primary btn-xs" value="EDIT" ng-click="submit(todo1)"></td></form>
+				<td><button class="btn btn-primary btn-xs" ng-click="deleter(todo1._id)">DELETE</button></td>
+			</tr>
+        
+		</table>
+
+	</div>
+</body>
+</html>

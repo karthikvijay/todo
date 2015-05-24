@@ -1,0 +1,28 @@
+<!--doctype html-->
+<html>
+<head>
+<head>
+<body><br><br>
+	<div class="col-md-4 col-md-offset-4 jumbotron">
+		<h2>EDIT YOUR DETAILS</h2>
+		<form role="form" novalidate name="editForm" ng-submit="submit(editForm)">
+			<div class="form-group">
+				<label>NAME</label>
+				<input type="text" name="name" placeholder="NAME OF THE TASK" class="form-control" id="name" ng-model="todo1.name">
+			</div>	
+			<div class="form-group">
+				<label>DESCRIPTION</label>
+				<input type="text" name="descript" placeholder="SHORT DESCRIPTION OF YOUR TASK" class="form-control" id="descript" ng-model="todo1.descript">
+			</div>
+			<div class="checkbox">
+               <label><input type="checkbox" name="status"  id="status" ng-model="todo1.status">STATUS</label>
+            </div>
+            <div class="form-group">
+            	<input type="submit" class="btn btn-primary" value="Submit" >
+            </div>
+		</form>
+	
+
+	</div>
+</body>
+</html>
